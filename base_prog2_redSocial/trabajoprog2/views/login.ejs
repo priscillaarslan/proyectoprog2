@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <main>
+        <section class="center main-content">
+        <h1>Login</h1>
+        <form action="/users/miPerfil" method="get">
+        <div>
+            <label for="Email">Email</label>
+            <input class="cajalogin" type="Email" name="Email" id="" placeholder="Inserta tu email">
+        </div>
+        <div>
+            <label for="Password">Contraseña</label>
+            <input class="cajalogin1" type="Password" name="Password" id="">
+        </div>
+        <button class="buttonlogeate" type="submit">Logeate</button>
+
+    </form>
+        </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head') %>
+
+<body>
+    <%- include('./partials/header') %>
+
+    <main>
+        <section class="center main-content">
+        <h1>Editar perfil</h1>
+        <form action="users/miPerfil" method="get"></form>
+        <div>
+            <label for="Email">Email</label>
+            <input type="Email" name="Email" value="<%= info[indice].email %>" >
+        </div>
+        <div>
+            <label for="Username">Username</label>
+            <input type="text" name="Username" value="<%= info[indice].username %>" >
+        </div>
+
+        <div>
+            <label for="Password">Password</label>
+            <input type="Password" name="Password"  value="<%= info[indice].password %>">
+        </div>
+        <div>
+            <label for="Pfp">Foto de perfil</label>
+            <input type="text" name="Pfp" value="<%= info[indice].foto %>" >
+        </div>
+        <div>
+            <label for="fecha">Fecha de naimiento</label>
+            <input type="text" name="fecha" value="<%= info[indice].fecha %>" >
+        </div>
+        <div>
+            <label for="dni">DNI</label>
+            <input type="text" name="DNI" value="<%= info[indice].dni %>"  >
+        </div>
+        
+        <button type="submit">Regsitrate</button>
+        </section>
+    </main>
+
+    <%- include('./partials/footer') %>
+
+</body>
+
+</html>
