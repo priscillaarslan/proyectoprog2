@@ -387,3 +387,8 @@ main {
 .menu2{
   color: rgba(89, 11, 11, 0.871);
 }
+
+.imagenperfil{
+  height: 55px;
+  width: 55px;
+}
