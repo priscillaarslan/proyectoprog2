@@ -2,7 +2,7 @@ const data = {
   usuarios: [
     {
       username: "Martulinda",
-      foto: "../public/img/FOTO1.jpeg",
+      foto: "https://via.placeholder.com/101x99",
       email: "parslan@udesa.edu.ar",
       password: "1234",
       fecha: "2002/11/05",
