@@ -27,11 +27,11 @@ const data = {
   ],
   posteos: [
     {
-      foto: "https://via.placeholder.com/260x260",
+      foto: "https://via.placeholder.com/249x249",
       texto: "foto random",
     },
     {
-      foto: "https://via.placeholder.com/253x253",
+      foto: "https://via.placeholder.com/249x249",
       texto: "foto random 1",
     },
     {
