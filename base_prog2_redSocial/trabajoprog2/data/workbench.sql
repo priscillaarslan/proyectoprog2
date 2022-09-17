@@ -66,37 +66,37 @@ VALUES ('usuario342@gmail.edu.ar', 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUg
 
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://st1.uvnimg.com/dims4/default/4f90522/2147483647/thumbnail/1240x698/quality/75/?url=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fimj%2Fotramedicina%2FB%2FBeneficios-de-andar-en-bicicleta-1.jpg','Hermoso dia para andar en bici ',1,3);
+VALUES ('https://st1.uvnimg.com/dims4/default/4f90522/2147483647/thumbnail/1240x698/quality/75/?url=https%3A%2F%2Fuvn-brightspot.s3.amazonaws.com%2Fassets%2Fvixes%2Fimj%2Fotramedicina%2FB%2FBeneficios-de-andar-en-bicicleta-1.jpg','Hermoso dia para andar en bici ',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://www.parati.com.ar/wp-content/uploads/2022/08/11-de-agosto-D%C3%ADa-del-Nutricionista-DESTACADA-749x561.jpg.webp','Arrancanco el dia de una manera saludable',1,3);
+VALUES ('https://www.parati.com.ar/wp-content/uploads/2022/08/11-de-agosto-D%C3%ADa-del-Nutricionista-DESTACADA-749x561.jpg.webp','Arrancanco el dia de una manera saludable',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://www.saludalia.com/Uploads/saludalia.com/ImagenesGrandes/el-impacto-de-un-estilo-de-vida-saludable.jpg','Alimentacion consiente',1,3);
+VALUES ('https://www.saludalia.com/Uploads/saludalia.com/ImagenesGrandes/el-impacto-de-un-estilo-de-vida-saludable.jpg','Alimentacion consiente',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://www.clinicabiblica.com/images/noticias2022/consejos0422.jpg','	Dia soleado acompañado de actividades al aire libre',1,3);
+VALUES ('https://www.clinicabiblica.com/images/noticias2022/consejos0422.jpg','	Dia soleado acompañado de actividades al aire libre',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPr7huCbf59wWWvI1AXP24N7iRodl7Roff_Ka5vd06WH8sE1c5pFErpt_fXRFnWgj6vY4&usqp=CAU','Haciendo yoga',1,3);
+VALUES ('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPr7huCbf59wWWvI1AXP24N7iRodl7Roff_Ka5vd06WH8sE1c5pFErpt_fXRFnWgj6vY4&usqp=CAU','Haciendo yoga',1,);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://concepto.de/wp-content/uploads/2015/08/familia-extensa-e1591818025158-800x400.jpg','Domingo en familia',1,3);
+VALUES ('https://concepto.de/wp-content/uploads/2015/08/familia-extensa-e1591818025158-800x400.jpg','Domingo en familia',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://www.florespedia.com/Imagenes/flores-bonitas.jpg','#Flores de colores',1,3);
+VALUES ('https://www.florespedia.com/Imagenes/flores-bonitas.jpg','#Flores de colores',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://mundoentrenamiento.com/wp-content/uploads/2018/08/pilates.jpg','#pilates',1,3);
+VALUES ('https://mundoentrenamiento.com/wp-content/uploads/2018/08/pilates.jpg','#pilates',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://via.placeholder.com/260x260','texto para el posteo',1,3);
+VALUES ('https://via.placeholder.com/260x260','texto para el posteo',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/MOLWAU2YXFCILOHQVJNAKZ5RWA','Paseo en rollers',1,3);
+VALUES ('https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/MOLWAU2YXFCILOHQVJNAKZ5RWA','Paseo en rollers',1);
 
 INSERT INTO posteos (foto,texto,FkUserId,)
-VALUES ('https://blog.argos.cl/wp-content/uploads/2016/11/Diseño-sin-t%C3%ADtulo.jpg','Dia de asado',1,3);
+VALUES ('https://blog.argos.cl/wp-content/uploads/2016/11/Diseño-sin-t%C3%ADtulo.jpg','Dia de asado',1);
 
 
 
