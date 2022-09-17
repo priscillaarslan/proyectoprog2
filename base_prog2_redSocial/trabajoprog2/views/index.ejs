@@ -10,16 +10,18 @@
 
     <main>
         <section class="center main-content">
+            <% for (let i=0; i<posteos.length;i++){ %> 
+                <% let post= posteos[i] %> 
             <article class="post">
                 <div class="info-usuario ">
-                    <img class="foto-usuario" src="/img/kris jenner foto d perfil.jpg" alt="">
+                    <img class="foto-usuario" src="<%= post.imagen %>  " alt="">
                     <h4>
-                        <a href="/users/detalleUsuario">Kris Jenner</a>
+                        <a href="/users/detalleUsuario/<%= post.idUsuario %> "> Kris Jenner </a>
                     </h4>
                 </div>
                 <div class="post-body">
                     <a href="/posts/detallePost">
-                        <img src="img/kris jenner foto.jpg" alt="">
+                        <img src="<%= post.foto %> " alt="">
                     </a>
                 </div>
                 <ul class="post-reacciones">
@@ -33,123 +35,18 @@
                 <div class="post-comentarios">
                     <h4>Comentarios</h4>
                     <ul>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
+                        <% for( let j =0; j<post.comentarios.length;j++ ) { %>
+                          <li>
+                            <a href="/users/detalleUsuario/<%= post.comentarios[j].idUsuario %> "><%= post.comentarios[j].usuario %> </a>
+                            <span><%= post.comentarios[j].comentario %> </span>
                         </li>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                        </li>
+                        <% } %>
                         <a href="/posts/detallePost">Ver más...</a>
                     </ul>
                 </div>
             </article>
-            <article class="post">
-                <div class="info-usuario ">
-                    <img class="foto-usuario" src="img/kendall jenner foto.jpg" alt="">
-                    <h4>
-                        <a href="/users/detalleUsuario">Kendall Jenner</a>
-                    </h4>
-                </div>
-                <div class="post-body">
-                    <a href="/posts/detallePost">
-                        <img src="img/foto de perfil kendall 2.jpg" alt="">
-                    </a>
-                </div>
-                <ul class="post-reacciones">
-                    <li>
-                        <i class="fa-regular fa-heart"></i>
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-comment"></i>
-                    </li>
-                </ul>
-                <div class="post-comentarios">
-                    <h4>Comentarios</h4>
-                    <ul>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                        </li>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                        </li>
-                        <a href="/posts/detallePost">Ver más...</a>
-                    </ul>
-                </div>
-            </article>
-            <article class="post">
-                <div class="info-usuario ">
-                    <img class="foto-usuario" src="/img/kylie jenner foto d perfil!.jpg" alt="">
-                    <h4>
-                        <a href="img/FOTO4.jpeg">Kylie Jenner</a>
-                    </h4>
-                </div>
-                <div class="post-body">
-                    <a href="/posts/detallePost">
-                        <img src="img/Kylie jenner foto.jpg"alt="">
-                    </a>
-                </div>
-                <ul class="post-reacciones">
-                    <li>
-                        <i class="fa-regular fa-heart"></i>
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-comment"></i>
-                    </li>
-                </ul>
-                <div class="post-comentarios">
-                    <h4>Comentarios</h4>
-                    <ul>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                        </li>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                        </li>
-                        <a href="/posts/detallePost">Ver más...</a>
-                    </ul>
-                </div>
-            </article>
-            <article class="post">
-                <div class="info-usuario ">
-                    <img class="foto-usuario" src="img/kim kardashian foto d perfil.jpg" alt="">
-                    <h4>
-                        <a href="/users/detalleUsuario">Kim Kardashian</a>
-                    </h4>
-                </div>
-                <div class="post-body">
-                    <a href="/posts/detallePost">
-                        <img src="img/kim_kardashian foto 2.jpg" alt="">
-                    </a>
-                </div>
-                <ul class="post-reacciones">
-                    <li>
-                        <i class="fa-regular fa-heart"></i>
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-comment"></i>
-                    </li>
-                </ul>
-                <div class="post-comentarios">
-                    <h4>Comentarios</h4>
-                    <ul>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                        </li>
-                        <li>
-                            <a href="/users/detalleUsuario">Usuario</a>
-                            <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi</span>
-                        </li>
-                        <a href="/posts/detallePost">Ver más...</a>
-                    </ul>
-                </div>
-            </article>
+            <% } %> 
+           
         </section>    
     </main>
 

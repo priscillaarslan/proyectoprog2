@@ -5,7 +5,11 @@ const data = require('../data/index')
 //metodos
 const usersController = {
     detalleUsuario: function(req, res) {
-        res.render('detalleUsuario');
+      let id= req.params.id
+      let usuario = data.usuarios.find(usuario=>usuario.id==id)
+      let posteos = data.posteos.filter(posteo=>posteo.idUsuario==id)
+      console.log(posteos);
+        res.render('detalleUsuario',{usuario:usuario,posteos:posteos});
       },
       Login: function(req, res) {
         res.render('Login');
