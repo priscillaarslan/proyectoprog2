@@ -106,25 +106,25 @@ INSERT INTO comentarios (texto,FkUserId,Fkpostid)
 VALUES ('quiero ser asi', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('tremendo!!!', '1','3' );
+VALUES ('tremendo!!!', '1','2' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('increible', '1','3' );
+VALUES ('increible', '1','4' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('wowwww', '1','3' );
+VALUES ('wowwww', '1','5' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('que envidia', '1','3' );
+VALUES ('que envidia', '1','6' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('tremenda foto', '1','3' );
+VALUES ('tremenda foto', '1','7' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('quien pudiera!', '1','3' );
+VALUES ('quien pudiera!', '1','2' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('que buena foto!!', '1','3' );
+VALUES ('que buena foto!!', '1','1' );
 
 
 
