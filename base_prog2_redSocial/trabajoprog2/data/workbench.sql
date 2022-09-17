@@ -103,28 +103,28 @@ VALUES ('https://blog.argos.cl/wp-content/uploads/2016/11/Diseño-sin-t%C3%ADtul
 
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('quiero ser asi', '1','2' );
+VALUES ('quiero ser asi', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('tremendo!!!', '1','2' );
+VALUES ('tremendo!!!', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('increible', '1','2' );
+VALUES ('increible', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('wowwww', '1','2' );
+VALUES ('wowwww', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('que envidia', '1','2' );
+VALUES ('que envidia', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('tremenda foto', '1','2' );
+VALUES ('tremenda foto', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('quien pudiera!', '1','2' );
+VALUES ('quien pudiera!', '1','3' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
-VALUES ('que buena foto!!', '1','2' );
+VALUES ('que buena foto!!', '1','3' );
 
 
 
