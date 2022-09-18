@@ -42,10 +42,10 @@ deleatedAT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 FkUserId INT UNSIGNED,
 FOREIGN KEY (FkUserId) REFERENCES usuarios (Id),
 
- INT UNSIGNED,
+ FkPostId INT UNSIGNED,
 FOREIGN KEY () REFERENCES posteos (Id)
 
-);
+);      
 
 INSERT INTO usuarios (email,foto, password,nacimiento,dni)
 VALUES ('parslan@udesa.edu.ar', 'https://bangbranding.com/blog/wp-content/uploads/2016/09/700x511_SliderInterior.jpg', '1234','2002-12-10',123456789);
