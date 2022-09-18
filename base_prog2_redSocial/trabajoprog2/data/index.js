@@ -2,7 +2,7 @@ const data = {
   usuarios: [
     {
       username: "Kris Jenner",
-      foto: "https://via.placeholder.com/101x99",
+      foto: "/img/kris jenner foto d perfil.jpg",
       email: "parslan@udesa.edu.ar",
       password: "1234",
       fecha: "2002/11/05",
