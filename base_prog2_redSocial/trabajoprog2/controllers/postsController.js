@@ -12,7 +12,7 @@ const postsController = {
     
     
     }  
-    
+  
     //exportacion
     
     module.exports = postsController;
