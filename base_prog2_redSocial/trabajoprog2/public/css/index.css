@@ -396,3 +396,20 @@ main {
   width: 55px;
   height: 55px;
 }
+
+.letradetalle{
+  margin-left: 0.2cm;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bolder;
+  color: black; 
+}
+
+.letradetalle1{
+  font-size: 15px;
+}
+
+.profile{
+  height: 50px;
+  height: 50px;
+}
