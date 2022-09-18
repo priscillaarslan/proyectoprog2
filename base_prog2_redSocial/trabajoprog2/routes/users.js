@@ -14,4 +14,5 @@ que es lo que estamos haciendo dentro de esa ruta */
  SIEMPRE LAS RUTAS CON PARAMETRO VAN ULTIMAS.  */
 router.get("/detalleUsuario/:id", usersController.detalleUsuario);
 
+
 module.exports = router;
