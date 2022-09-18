@@ -16,7 +16,7 @@ const data = {
     },
     {
       username: "Kendall Jenner",
-      foto: "https://via.placeholder.com/99x99",
+      foto: "https://via.placeholder.com/101x99",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
@@ -65,7 +65,7 @@ const data = {
      ],
   posteos: [
     { 
-     
+     nombre: "Kris Jenner",
       foto: "/img/kris jenner foto.jpg",
       imagen: "/img/kris jenner foto d perfil.jpg",
       id: 1,
@@ -86,7 +86,7 @@ const data = {
 
     },
     {
-      
+      nombre:"Kendall Jenner",
       foto: "/img/foto de perfil kendall 2.jpg",
       imagen: "/img/foto de perfil kendall.jpg",
       id: 2,
@@ -107,6 +107,7 @@ const data = {
 
     },
     {
+      nombre: "Kylie Jenner",
       foto: "/img/Kylie jenner foto.jpg",
       imagen: "/img/kylie jenner foto d perfil!.jpg",
       id: 3,
@@ -114,19 +115,20 @@ const data = {
       texto: "foto random",
       comentarios: [
         {
-          idUsuario: 1,
-          comentario: "Hola",
-          usuario: "Rocio",
+          idUsuario: 3,
+          comentario: "I like your makeup",
+          usuario: "kendalljenner",
         },
         {
-          idUsuario: 1,
-          comentario: "Hola",
-          usuario:"Rocio",
+          idUsuario: 3,
+          comentario: "so pretty",
+          usuario:"pampitaoficial",
         },
       ]
 
     },
     {
+      nombre:"Kim Kardashian",
       foto: "/img/kim_kardashian foto 2.jpg",
       imagen: "/img/kim kardashian foto d perfil.jpg",
       id: 4,
@@ -135,79 +137,81 @@ const data = {
       comentarios: [
         {
           idUsuario: 4,
-          comentario: "Hola",
-          usuario: "Rocio",
+          comentario: "I like your sunglasses",
+          usuario: "Taylor Swift",
         },
         {
           idUsuario: 4,
-          comentario: "Hola",
-          usuario:"Rocio",
+          comentario: "",
+          usuario:"",
         },
+       
+
       ]
 
     },
-    {
-      foto: "/img/kris jenner foto d perfil.jpg",
-      imagen: "img/kris jenner foto.jpg",
+    { nombre:"Kourtney Kardashian",
+      foto: "/img/kourtney foto.jpg",
+      imagen: "img/kourtney-fotodperfil.jpg",
       id: 5,
       idUsuario: 5,
       texto: "foto random",
       comentarios: [
         {
           idUsuario: 5,
-          comentario: "Hola",
-          usuario: "Rocio",
+          comentario: "I love you",
+          usuario: "Travis Barker",
         },
         {
           idUsuario: 5,
-          comentario: "Hola",
-          usuario:"Rocio",
+          comentario: "Nice couple!",
+          usuario:"forbes",
         },
       ]
 
     },
-    {
-      foto: "/img/kris jenner foto d perfil.jpg",
-      imagen: "img/kris jenner foto.jpg",
+    { nombre: "Khloe Kardashian",
+      foto: "/img/kloe foto.jpg",
+      imagen: "img/khloe.jpg",
       id: 6,
       idUsuario: 6,
       texto: "foto random",
       comentarios: [
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario: "Rocio",
+          comentario: ":)",
+          usuario: "Cara Levigne",
         },
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario:"Rocio",
+          comentario: "Blondie",
+          usuario:"Miley Cyrus",
         },
       ]
 
     },
-    {
-      foto: "/img/kris jenner foto d perfil.jpg",
-      imagen: "img/kris jenner foto.jpg",
+    { nombre:"Kylie Jenner",
+      foto: "/img/travis.jpg",
+      imagen: "/img/kylie jenner foto d perfil!.jpg",
       id: 7,
       idUsuario: 7,
       texto: "foto random",
       comentarios: [
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario: "Rocio",
+          comentario: "Love this couple",
+          usuario: "Emily Richards",
         },
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario:"Rocio",
+          comentario: "Nice picture!!",
+          usuario:"Jonathan",
         },
       ]
 
     },
-    {
-      foto: "/img/kris jenner foto d perfil.jpg",
+    { nombre:"Kris Jenner",
+      foto: "/img/las kardashian.jpg",
       imagen: "img/kris jenner foto.jpg",
       id: 8,
       idUsuario: 8,
@@ -215,53 +219,53 @@ const data = {
       comentarios: [
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario: "Rocio",
+          comentario: "Kardashians<3",
+          usuario: "Kim Kardashian",
         },
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario:"Rocio",
+          comentario: "Love you Mom",
+          usuario:"Kendall Jenner",
         },
       ]
 
     },
-    {
-      foto: "/img/kris jenner foto d perfil.jpg",
-      imagen: "img/kris jenner foto.jpg",
+    { nombre:"Kim Kardashian",
+      foto: "/img/kanye.jpg",
+      imagen: "/img/kim kardashian foto d perfil.jpg",
       id: 9,
       idUsuario: 9,
       texto: "foto random",
       comentarios: [
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario: "Rocio",
+          comentario: "I love you",
+          usuario: "Kanye West",
         },
         {
           idUsuario: 1,
-          comentario: "Hola",
-          usuario:"Rocio",
+          comentario: "You are so lovely",
+          usuario:"Kylie Jenner",
         },
       ]
 
     },
-    {
-      foto: "/img/kris jenner foto d perfil.jpg",
-      imagen: "img/kris jenner foto.jpg",
-      id: 1,
-      idUsuario: 1,
+    { nombre:"Kendall Jenner",
+      foto: "/img/kendall-espejo.jpg",
+      imagen: "/img/foto de perfil kendall.jpg",
+      id: 10,
+      idUsuario: 10,
       texto: "foto random",
       comentarios: [
         {
           idUsuario: 10,
-          comentario: "Hola",
-          usuario: "Rocio",
+          comentario: "Nice outfit",
+          usuario: "Gigi Hadid",
         },
         {
           idUsuario: 10,
-          comentario: "Hola",
-          usuario:"Rocio",
+          comentario: "wow!",
+          usuario:"Bella Hadid",
         },
       ]
 
