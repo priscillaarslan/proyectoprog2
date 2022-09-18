@@ -5,10 +5,14 @@ const postsController = {
         res.render('agregarPost');
       },
 
-      detallePost: function(req, res) {
-        console.log(data);
-        res.render('detallePost',{info:data.posteos});
-      },
+      detallePost : function(req, res) {
+        let idPosteo = req.params.id
+
+        let detallePosteo = data.posteos.find(posteo => posteo.id == idPosteo)
+
+        return res.render('detallePost', {info: detallePosteo})
+
+      } ,
     
     
     }  
