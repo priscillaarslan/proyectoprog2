@@ -1,3 +1,5 @@
+
+
 const data = {
   usuarios: [
     {
@@ -94,12 +96,12 @@ const data = {
       texto: "foto random",
       comentarios: [
         {
-          idUsuario: 1,
+          idUsuario: 2,
           comentario: "Amazing!",
           usuario: "CharlyBrown",
         },
         {
-          idUsuario: 1,
+          idUsuario: 2,
           comentario: ":)",
           usuario:"Haley Bieber",
         },
@@ -165,7 +167,7 @@ const data = {
         {
           idUsuario: 5,
           comentario: "Nice couple!",
-          usuario:"forbes",
+          usuario:"Forbes",
         },
       ]
 
@@ -277,13 +279,7 @@ const data = {
    
   
   ],
-  detallePost:[
-    {
-      picture: "\img\foto de perfil kendall 2.jpg",
-      comentario:"Hola",
-      fotodPerfil:"/img/foto de perfil kendall 2.jpg",
-    }
-  ]
+ 
 };
 
 module.exports = data;

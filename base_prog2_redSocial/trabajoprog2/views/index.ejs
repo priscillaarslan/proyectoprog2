@@ -16,12 +16,11 @@
                 <div class="info-usuario ">
                     <img class="foto-usuario" src="<%= post.imagen %>  " alt="">
                     <h4>
-                        <a href="/users/detalleUsuario/<%= post.idUsuario %> "> <%= post.nombre %>  </a>
+                        <a href="/users/detalleUsuario/<%= post.idUsuario %> "> <%= post.nombre %> </a>
                     </h4>
                 </div>
                 <div class="post-body">
-                    <a href="/posts/detallePost">
-                        <img src="<%= post.foto %> " alt="">
+                    <a href="/posts/detallePost/<%= post.id %>"> <img src="<%= post.foto %> " alt="">
                     </a>
                 </div>
                 <ul class="post-reacciones">

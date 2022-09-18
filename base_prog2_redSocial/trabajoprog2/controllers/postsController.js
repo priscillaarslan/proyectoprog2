@@ -1,4 +1,4 @@
-const data = require("../data");
+const data = require('../data/index')
 
 const postsController = {
     agregarPost: function(req, res) {
@@ -6,7 +6,8 @@ const postsController = {
       },
 
       detallePost: function(req, res) {
-        res.render('detallePost',{info:data.detallePost});
+        console.log(data);
+        res.render('detallePost',{info:data.posteos});
       },
     
     
@@ -14,4 +15,4 @@ const postsController = {
     
     //exportacion
     
-    module.exports = postsController
+    module.exports = postsController;
