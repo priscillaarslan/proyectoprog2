@@ -14,7 +14,6 @@ const data = {
       seguidos: 5,
       id:1,
 
-      //* si no llega a andar, cambiar barras por guiones en las fechas *//
     },
     {
       username: "Kendall Jenner",
