@@ -1,3 +1,4 @@
+const data = require("../data");
 
 const postsController = {
     agregarPost: function(req, res) {
@@ -5,7 +6,7 @@ const postsController = {
       },
 
       detallePost: function(req, res) {
-        res.render('detallePost');
+        res.render('detallePost',{info:data.detallePost});
       },
     
     

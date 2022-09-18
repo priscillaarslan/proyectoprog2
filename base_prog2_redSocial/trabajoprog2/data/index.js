@@ -277,6 +277,13 @@ const data = {
    
   
   ],
+  detallePost:[
+    {
+      picture: "\img\foto de perfil kendall 2.jpg",
+      comentario:"Hola",
+      fotodPerfil:"/img/foto de perfil kendall 2.jpg",
+    }
+  ]
 };
 
 module.exports = data;
