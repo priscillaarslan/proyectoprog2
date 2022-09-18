@@ -14,7 +14,7 @@ const data = {
     },
     {
       username: "Kendall Jenner",
-      foto: "https://via.placeholder.com/101x99",
+      foto: "/img/foto de perfil kendall.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
@@ -26,7 +26,7 @@ const data = {
     },
     {
       username: "Kylie Jenner",
-      foto: "https://via.placeholder.com/99x99",
+      foto: "/img/kylie jenner foto d perfil!.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
@@ -38,7 +38,7 @@ const data = {
     },
     {
       username: "Kim Kardashian",
-      foto: "https://via.placeholder.com/99x99",
+      foto: "/img/kim kardashian foto d perfil.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
@@ -49,8 +49,8 @@ const data = {
       id: 4,
     },
     {
-      username: "Kendall Jenner",
-      foto: "https://via.placeholder.com/99x99",
+      username: "Kourtney Kardashian",
+      foto: "/img/kourtney-fotodperfil.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
@@ -60,7 +60,23 @@ const data = {
       seguidos: 50,
       id: 5,
     },
+<<<<<<< HEAD
   ],
+=======
+    {
+      username: "Khloe Kardashian",
+      foto: "/img/khloe.jpg",
+      email: "martinamendez@udesa.edu.ar",
+      password: "2468",
+      fecha: "2002/20/08",
+      dni: 123456789,
+      posteos: 10,
+      seguidores: 30,
+      seguidos: 50,
+      id:6,
+    },
+     ],
+>>>>>>> 7ceb8df77a7dff1a9910cd6ac2eebee650247ff9
   posteos: [
     {
       nombre: "Kris Jenner",
@@ -186,17 +202,17 @@ const data = {
       nombre: "Kylie Jenner",
       foto: "/img/travis.jpg",
       imagen: "/img/kylie jenner foto d perfil!.jpg",
-      id: 7,
-      idUsuario: 7,
+      id: 3,
+      idUsuario: 3,
       texto: "foto random",
       comentarios: [
         {
-          idUsuario: 1,
+          idUsuario: 3,
           comentario: "Love this couple",
           usuario: "Emily Richards",
         },
         {
-          idUsuario: 1,
+          idUsuario: 3,
           comentario: "Nice picture!!",
           usuario: "Jonathan",
         },
@@ -206,8 +222,8 @@ const data = {
       nombre: "Kris Jenner",
       foto: "/img/las kardashian.jpg",
       imagen: "img/kris jenner foto.jpg",
-      id: 8,
-      idUsuario: 8,
+      id: 1,
+      idUsuario: 1,
       texto: "foto random",
       comentarios: [
         {
@@ -226,17 +242,17 @@ const data = {
       nombre: "Kim Kardashian",
       foto: "/img/kanye.jpg",
       imagen: "/img/kim kardashian foto d perfil.jpg",
-      id: 9,
-      idUsuario: 9,
+      id: 4,
+      idUsuario: 4,
       texto: "foto random",
       comentarios: [
         {
-          idUsuario: 1,
+          idUsuario: 4,
           comentario: "I love you",
           usuario: "Kanye West",
         },
         {
-          idUsuario: 1,
+          idUsuario: 4,
           comentario: "You are so lovely",
           usuario: "Kylie Jenner",
         },
@@ -246,17 +262,17 @@ const data = {
       nombre: "Kendall Jenner",
       foto: "/img/kendall-espejo.jpg",
       imagen: "/img/foto de perfil kendall.jpg",
-      id: 10,
-      idUsuario: 10,
+      id: 2,
+      idUsuario: 2,
       texto: "foto random",
       comentarios: [
         {
-          idUsuario: 10,
+          idUsuario: 2,
           comentario: "Nice outfit",
           usuario: "Gigi Hadid",
         },
         {
-          idUsuario: 10,
+          idUsuario: 2,
           comentario: "wow!",
           usuario: "Bella Hadid",
         },
