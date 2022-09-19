@@ -17,7 +17,7 @@ const usersController = {
     miPerfil: function(req, res) { 
       console.log(data.usuarios)
       console.log(data.posteos)
-        res.render('miPerfil',{info:data.usuarios[0],posts:data.posteos});
+        res.render('miPerfil',{info:data.usuarios[0],posts:data.posteos.filter(posteo=>posteo.idUsuario==data.usuarios[0].id)});
       },
       registracion: function(req, res) {
         res.render('registracion');

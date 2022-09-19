@@ -12,7 +12,7 @@
             <section class="center main-content post">
               <div class="info-usuario">
                     <img class="foto-usuario" src="<%= info.imagen %>  " alt="">
-                    <p><a href="/views/detalleUsuario/ "</a><%= info.nombre %> </p>
+                    <p><a href="/users/detalleUsuario/<%= info.id %>  "><%= info.nombre %></a></p>
                 </div>
                 <img height="415px" class="photo" src="<%= info.foto %>  " alt=""> 
                 <p class="letradetalle">  <i class="fa-solid fa-heart"></i></p>
@@ -27,50 +27,15 @@
                         <button type="submit">Comentar</button>
                     </form>
                     <div>
-                        
-                          <article class="comment">
-                            <img class="imagenperfil" src="https://media.revistavanityfair.es/photos/60e85f345be4efc0659fb18a/master/pass/49960.jpg" alt="">
-                            <section class="content">
-                                <a class="user" href="/base_prog2_redSocial/trabajoprog2/views/detalleUsuario.ejs">Kris Jenner </a>
-                                <span class="text">so cute!</span>
-                            </section>
-                            
-                        </article>
-                        <article class="comment">
-                            <img class="imagenperfil" src="https://i.blogs.es/958e3e/dl_u449624_004/375_375.jpeg" alt="">
-                            <section class="content">
-                                <a class="user" href="/users/detalleUsuario">Kourtney Kardashian</a>
-                                <span class="text">so beautiful, miss you so much </span>
-                            </section>
-                        </article>
-                        <article class="comment">
-                            <img class="imagenperfil" src="https://cdn-3.expansion.mx/4e/41/45777a8f4539886b9a4ae7441b5c/60939868-356233055029032-2727987522876590928-n.jpg" alt="">
-                            <section class="content">
-                                <a class="user" href="/users/detalleUsuario">KylieJenner</a>
-                                <span class="text">love u </span>
-                            </section>
-                        </article>
-                        <article class="comment">
-                            <img class="imagenperfil" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/kimkardashian-1649682792.jpg" alt="">
-                            <section class="content">
-                                <a class="user" href="/users/detalleUsuario">KimKardashian</a>
-                                <span class="text">really cool</span>
-                            </section>
-                        </article>
-                        <article class="comment">
-                            <img class="imagenperfil" src="https://cdn-3.expansion.mx/dims4/default/c119601/2147483647/strip/true/crop/1200x800+0+0/resize/1200x800!/format/webp/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F52%2F1b%2Fede2ebc642a9b7649a4fc8cf9f50%2Fkhloe.jpg" alt="">
-                            <section class="content">
-                                <a class="user" href="/users/detalleUsuario">KourtneyKardashian</a>
-                                <span class="text">Hola</span>
-                            </section>
-                        </article>
-                        <article class="comment">
-                            <img class="imagenperfil" src="/img/Kanye_West foto d perfil.jpg" alt="">
-                            <section class="content">
-                                <a class="user" href="/users/detalleUsuario">Kanye West </a>
-                                <span class="text"> Beautiful!</span>
-                            </section>
-                        </article>
+                        <% for (let i = 0; i < info.comentarios.length; i++) { %> 
+                            <article class="comment">
+                                <img class="imagenperfil" src="<%= info.comentarios[i].foto %>" alt="">
+                                <section class="content">
+                                    <a class="user" href="/users/detalleUsuario/<%= info.comentarios[i].idUsuario %>"><%= info.comentarios[i].usuario %></a>
+                                    <span class="text"><%= info.comentarios[i].comentario %></span>
+                                </section>
+                            </article>
+                        <% } %>
                     </div>
                 </section>
             </section>

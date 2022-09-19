@@ -23,8 +23,8 @@
             <section class="bottom">
                 <% for (let i =0;i<posteos.length;i++){ %> 
                 <article class="post">
-                    <a href="/posts/detallePost">
-                        <img class="post" src="<%= posteos[i].foto %> " alt="">
+                    <a href="/posts/detallePost/<%= posteos[i].id %>">
+                        <img class="post" src="<%= posteos[i].foto %>" alt="">
                     </a>
                 </article>
                 <% } %> 
