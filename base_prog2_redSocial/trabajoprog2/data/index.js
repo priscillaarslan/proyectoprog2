@@ -98,6 +98,18 @@ const data = {
           usuario:"Kourtney Kardashian",
           foto: "/img/kourtney-fotodperfil.jpg",
         },
+        {
+          idUsuario: 4,
+          comentario: ":)",
+          usuario:"Kim Kardashian",
+          foto:"/img/kim kardashian foto d perfil.jpg",
+        },
+        {
+          idUsuario: 3,
+          comentario: "Amazing!",
+          usuario: "Kylie Jenner",
+          foto:"/img/kylie jenner foto d perfil!.jpg",
+        },
       ]
 
     },
@@ -121,6 +133,21 @@ const data = {
           usuario:"Kim Kardashian",
           foto:"/img/kim kardashian foto d perfil.jpg",
         },
+        {
+          idUsuario: 5,
+          comentario: "so pretty",
+          usuario:"Kourtney Kardashian",
+          foto:"/img/kourtney-fotodperfil.jpg",
+
+        },
+        {
+          idUsuario: 1,
+          comentario: "I like your makeup",
+          usuario: "Kris Jenner",
+          foto:"/img/kris jenner foto d perfil.jpg",
+        
+        },
+
       ]
 
     },
@@ -146,6 +173,18 @@ const data = {
           foto:"/img/kourtney-fotodperfil.jpg",
 
         },
+        {
+          idUsuario: 2,
+          comentario: "Amazing!",
+          usuario:"Kendall Jenner",
+          foto:"/img/foto de perfil kendall.jpg",
+        },
+        {
+          idUsuario: 4,
+          comentario: "Kardashians<3",
+          usuario: "Kim Kardashian",
+          foto:"/img/kim kardashian foto d perfil.jpg",
+        },
       ]
 
     },
@@ -169,7 +208,18 @@ const data = {
           usuario:"Kourtney Kardashian",
           foto:"/img/kourtney-fotodperfil.jpg",
         },
-       
+        {
+          idUsuario: 3,
+          comentario: "I love you",
+          usuario: "Kylie Jenner",
+          foto:"/img/kylie jenner foto d perfil!.jpg",
+        },
+        {
+          idUsuario: 2,
+          comentario: "SEXY",
+          usuario:"Kendall Jenner",
+          foto:"/img/foto de perfil kendall.jpg",
+        },
 
       ]
 
@@ -193,6 +243,18 @@ const data = {
           usuario:"Kendall Jenner",
           foto:"/img/foto de perfil kendall.jpg",
         },
+        {
+          idUsuario: 1,
+          comentario: "Love this couple",
+          usuario: "Kris Jenner",
+          foto:"/img/kris jenner foto d perfil.jpg",
+        },
+        {
+          idUsuario: 4,
+          comentario: "Oh!!!",
+          usuario: "Kim Kardashian",
+          foto:"/img/kim kardashian foto d perfil.jpg",
+        },
       ]
 
     },
@@ -215,6 +277,18 @@ const data = {
           usuario:"Kendall Jenner",
           foto:"/img/foto de perfil kendall.jpg",
         },
+        {
+          idUsuario: 1,
+          comentario: "Beautiful",
+          usuario: "Kris Jenner",
+          foto:"/img/kris jenner foto d perfil.jpg",
+        },
+        {
+          idUsuario: 4,
+          comentario: "Your eyes",
+          usuario: "Kim Kardashian",
+          foto:"/img/kim kardashian foto d perfil.jpg",
+        },
       ]
 
     },
@@ -233,10 +307,23 @@ const data = {
         },
         {
           idUsuario: 3,
-          comentario: "I love you",
+          comentario: "Photo with my boyfriend",
           usuario: "Kylie Jenner",
           foto:"/img/kylie jenner foto d perfil!.jpg",
         },
+        {
+          idUsuario: 2,
+          comentario: "Haha!",
+          usuario:"Kendall Jenner",
+          foto:"/img/kylie jenner foto d perfil!.jpg",
+        },
+        {
+          idUsuario: 6,
+          comentario: "I love you",
+          usuario: "Khloe Kardashian",
+          foto:"/img/khloe.jpg",
+        },
+
       ]
 
     },
@@ -257,6 +344,12 @@ const data = {
           idUsuario: 2,
           comentario: "Love you Mom",
           usuario:"Kendall Jenner",
+          foto:"/img/kylie jenner foto d perfil!.jpg",
+        },
+        {
+          idUsuario: 3,
+          comentario: "Nice",
+          usuario: "Kylie Jenner",
           foto:"/img/kylie jenner foto d perfil!.jpg",
         },
       ]
@@ -281,6 +374,18 @@ const data = {
           usuario:"Kris Jenner",
           foto:"/img/kris jenner foto.jpg",
         },
+        {
+          idUsuario: 3,
+          comentario: "Aggg!",
+          usuario: "Kylie Jenner",
+          foto:"/img/kylie jenner foto d perfil!.jpg",
+        },
+        {
+          idUsuario: 2,
+          comentario: "You are awesome!",
+          usuario:"Kendall Jenner",
+          foto:"/img/kylie jenner foto d perfil!.jpg",
+        },
       ]
 
     },
@@ -302,6 +407,18 @@ const data = {
           comentario: "wow!",
           usuario:"Kim Kardashian",
           foto:"/img/kim kardashian foto d perfil.jpg",
+        },
+        {
+          idUsuario: 1,
+          comentario: "Nice outfit",
+          usuario:"Kris Jenner",
+          foto:"/img/kris jenner foto.jpg",
+        },
+        {
+          idUsuario: 6,
+          comentario: "Always pretty",
+          usuario: "Khloe Kardashian",
+          foto:"/img/khloe.jpg",
         },
       ]
 
