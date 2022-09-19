@@ -24,7 +24,7 @@
             <section class="bottom">
             <% for(let i=0; i<posts.length;i++){ %>
                 <article class="post">
-                    <a href="/posts/detallePost">
+                    <a href="/posts/detallePost/<%= posts[i].id %>">
                         <img src="<%= posts[i].foto %>" alt="">
                         <p> <%= posts[i].texto %></p>
                     </a>
