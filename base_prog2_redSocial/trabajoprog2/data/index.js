@@ -64,6 +64,18 @@ const data = {
       seguidos: 120,
       id:5,
     },
+    {
+      username: "Klhoe Kardashian",
+      foto: "/img/khloe.jpg",
+      email: "martinamendez@udesa.edu.ar",
+      password: "2468",
+      fecha: "2002/20/08",
+      dni: 123456789,
+      posteos: 1,
+      seguidores: 3000,
+      seguidos: 120,
+      id:6,
+    },
      ],
   posteos: [
     { 
@@ -174,7 +186,7 @@ const data = {
     },
     { nombre: "Khloe Kardashian",
       foto: "/img/kloe foto.jpg",
-      imagen: "img/khloe.jpg",
+      imagen: "/img/khloe.jpg",
       id: 6,
       idUsuario: 6,
       texto: "",
