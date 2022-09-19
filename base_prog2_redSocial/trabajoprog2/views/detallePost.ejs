@@ -26,22 +26,15 @@
                         <input type="text" class="input" placeholder="Agregar comentario">
                         <button type="submit">Comentar</button>
                     </form>
-                    
                     <div>
-                        <% for( let i = 0; index < post.comentarios.length; i++ ) { %>
-                          <article class="comment">
-                            <img class="imagenperfil" src="" alt="">
-                            <section class="content">
-                                <a class="user" href="/users/detalleUsuario"> KrisJenner</a>
-
-
-                                
                         
-                            
-                                </li>
+                          <article class="comment">
+                            <img class="imagenperfil" src="https://media.revistavanityfair.es/photos/60e85f345be4efc0659fb18a/master/pass/49960.jpg" alt="">
+                            <section class="content">
+                                <a class="user" href="/base_prog2_redSocial/trabajoprog2/views/detalleUsuario.ejs">Kris Jenner </a>
                                 <span class="text">so cute!</span>
                             </section>
-                            <% } %>
+                            
                         </article>
                         <article class="comment">
                             <img class="imagenperfil" src="https://i.blogs.es/958e3e/dl_u449624_004/375_375.jpeg" alt="">
@@ -84,8 +77,6 @@
         </div>
     </main>
 
-
-    
     <%- include('./partials/footer') %>
 </body>
 
