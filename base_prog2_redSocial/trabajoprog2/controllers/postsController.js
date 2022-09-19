@@ -9,7 +9,9 @@ const postsController = {
         let idPosteo = req.params.id
         let detallePosteo = data.posteos.find(posteo => posteo.id == idPosteo)
         return res.render('detallePost', {info: detallePosteo})
+        
       } ,
+      
 
     }  
   

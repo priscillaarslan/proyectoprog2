@@ -26,12 +26,19 @@
                         <input type="text" class="input" placeholder="Agregar comentario">
                         <button type="submit">Comentar</button>
                     </form>
+                    
                     <div>
                         <% for( let i = 0; index < post.comentarios.length; i++ ) { %>
                           <article class="comment">
                             <img class="imagenperfil" src="" alt="">
                             <section class="content">
-                                <a class="user" href="/base_prog2_redSocial/trabajoprog2/views/detalleUsuario.ejs"><%= post.comentarios[i].usuario %> </a>
+                                <a class="user" href="/users/detalleUsuario"> KrisJenner</a>
+
+
+                                
+                        
+                            
+                                </li>
                                 <span class="text">so cute!</span>
                             </section>
                             <% } %>
@@ -77,6 +84,8 @@
         </div>
     </main>
 
+
+    
     <%- include('./partials/footer') %>
 </body>
 
