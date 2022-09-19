@@ -105,6 +105,9 @@ main {
   border-radius: 10px;
   color: #777;
   margin-bottom: 20px;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .post-body img {
   width: 100%;
@@ -294,8 +297,8 @@ main {
 .profile {
   border-radius: 90%;
   border: 2px solid chocolate;
-  width: 100px;
-  height: 80px;
+  width: 55px;
+  height: 55px;
 }
 
 .user-detail .meta {

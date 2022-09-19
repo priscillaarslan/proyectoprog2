@@ -10,58 +10,58 @@ const data = {
       fecha: "2002/11/05",
       dni: 123456789,
       posteos: 2,
-      seguidores: 10,
-      seguidos: 5,
+      seguidores: 1000000,
+      seguidos: 120,
       id:1,
 
     
     },
     {
       username: "Kendall Jenner",
-      foto: "https://via.placeholder.com/101x99",
+      foto: "/img/foto de perfil kendall.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
       dni: 123456789,
-      posteos: 10,
-      seguidores: 30,
-      seguidos: 50,
+      posteos: 2,
+      seguidores: 200000,
+      seguidos: 150,
       id:2,
     },
     {
       username: "Kylie Jenner",
-      foto: "https://via.placeholder.com/99x99",
+      foto: "/img/kylie jenner foto d perfil!.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
       dni: 123456789,
-      posteos: 10,
-      seguidores: 30,
-      seguidos: 50,
+      posteos: 2,
+      seguidores: 150000,
+      seguidos: 200,
       id:3,
     },
     {
       username: "Kim Kardashian",
-      foto: "https://via.placeholder.com/99x99",
+      foto: "/img/kim kardashian foto d perfil.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
       dni: 123456789,
-      posteos: 10,
-      seguidores: 30,
-      seguidos: 50,
+      posteos: 2,
+      seguidores: 30000,
+      seguidos: 150,
       id:4,
     },
     {
-      username: "Kendall Jenner",
-      foto: "https://via.placeholder.com/99x99",
+      username: "Kourtney Kardashian",
+      foto: "/img/kourtney-fotodperfil.jpg",
       email: "martinamendez@udesa.edu.ar",
       password: "2468",
       fecha: "2002/20/08",
       dni: 123456789,
-      posteos: 10,
-      seguidores: 30,
-      seguidos: 50,
+      posteos: 1,
+      seguidores: 3000,
+      seguidos: 120,
       id:5,
     },
      ],
@@ -72,7 +72,7 @@ const data = {
       imagen: "/img/kris jenner foto d perfil.jpg",
       id: 1,
       idUsuario: 1,
-      texto: "foto random",
+      texto: "",
       comentarios: [
         {
           idUsuario: 1,
@@ -93,7 +93,7 @@ const data = {
       imagen: "/img/foto de perfil kendall.jpg",
       id: 2,
       idUsuario: 2,
-      texto: "foto random",
+      texto: "",
       comentarios: [
         {
           idUsuario: 2,
@@ -114,7 +114,7 @@ const data = {
       imagen: "/img/kylie jenner foto d perfil!.jpg",
       id: 3,
       idUsuario: 3,
-      texto: "foto random",
+      texto: "",
       comentarios: [
         {
           idUsuario: 3,
@@ -135,7 +135,7 @@ const data = {
       imagen: "/img/kim kardashian foto d perfil.jpg",
       id: 4,
       idUsuario: 4,
-      texto: "foto random",
+      texto: "",
       comentarios: [
         {
           idUsuario: 4,
@@ -157,7 +157,7 @@ const data = {
       imagen: "img/kourtney-fotodperfil.jpg",
       id: 5,
       idUsuario: 5,
-      texto: "foto random",
+      texto: "",
       comentarios: [
         {
           idUsuario: 5,
@@ -177,7 +177,7 @@ const data = {
       imagen: "img/khloe.jpg",
       id: 6,
       idUsuario: 6,
-      texto: "foto random",
+      texto: "",
       comentarios: [
         {
           idUsuario: 1,
@@ -195,9 +195,9 @@ const data = {
     { nombre:"Kylie Jenner",
       foto: "/img/travis.jpg",
       imagen: "/img/kylie jenner foto d perfil!.jpg",
-      id: 7,
-      idUsuario: 7,
-      texto: "foto random",
+      id: 3,
+      idUsuario: 3,
+      texto: "",
       comentarios: [
         {
           idUsuario: 1,
@@ -215,9 +215,9 @@ const data = {
     { nombre:"Kris Jenner",
       foto: "/img/las kardashian.jpg",
       imagen: "img/kris jenner foto.jpg",
-      id: 8,
-      idUsuario: 8,
-      texto: "foto random",
+      id: 1,
+      idUsuario: 1,
+      texto: "",
       comentarios: [
         {
           idUsuario: 1,
@@ -235,9 +235,9 @@ const data = {
     { nombre:"Kim Kardashian",
       foto: "/img/kanye.jpg",
       imagen: "/img/kim kardashian foto d perfil.jpg",
-      id: 9,
-      idUsuario: 9,
-      texto: "foto random",
+      id: 4,
+      idUsuario: 4,
+      texto: "",
       comentarios: [
         {
           idUsuario: 1,
@@ -255,17 +255,17 @@ const data = {
     { nombre:"Kendall Jenner",
       foto: "/img/kendall-espejo.jpg",
       imagen: "/img/foto de perfil kendall.jpg",
-      id: 10,
-      idUsuario: 10,
-      texto: "foto random",
+      id: 2,
+      idUsuario: 2,
+      texto: "",
       comentarios: [
         {
-          idUsuario: 10,
+          idUsuario: 2,
           comentario: "Nice outfit",
           usuario: "Gigi Hadid",
         },
         {
-          idUsuario: 10,
+          idUsuario: 2,
           comentario: "wow!",
           usuario:"Bella Hadid",
         },
@@ -279,6 +279,7 @@ const data = {
    
   
   ],
+  
  
 };
 
