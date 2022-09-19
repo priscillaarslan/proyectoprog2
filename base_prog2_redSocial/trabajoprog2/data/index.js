@@ -295,7 +295,7 @@ const data = {
     { nombre:"Kylie Jenner",
       foto: "/img/travis.jpg",
       imagen: "/img/kylie jenner foto d perfil!.jpg",
-      id: 3,
+      id: 7,
       idUsuario: 3,
       texto: "",
       comentarios: [
@@ -329,8 +329,8 @@ const data = {
     },
     { nombre:"Kris Jenner",
       foto: "/img/las kardashian.jpg",
-      imagen: "img/kris jenner foto.jpg",
-      id: 1,
+      imagen: "/img/kris jenner foto.jpg",
+      id: 8,
       idUsuario: 1,
       texto: "",
       comentarios: [
@@ -352,13 +352,19 @@ const data = {
           usuario: "Kylie Jenner",
           foto:"/img/kylie jenner foto d perfil!.jpg",
         },
+        {
+          idUsuario: 5,
+          comentario: "wow!",
+          usuario:"Kourtney Kardashian",
+          foto:"/img/kourtney-fotodperfil.jpg",
+        },
       ]
 
     },
     { nombre:"Kim Kardashian",
       foto: "/img/kanye.jpg",
       imagen: "/img/kim kardashian foto d perfil.jpg",
-      id: 4,
+      id: 9,
       idUsuario: 4,
       texto: "",
       comentarios: [
@@ -392,7 +398,7 @@ const data = {
     { nombre:"Kendall Jenner",
       foto: "/img/kendall-espejo.jpg",
       imagen: "/img/foto de perfil kendall.jpg",
-      id: 2,
+      id: 10,
       idUsuario: 2,
       texto: "",
       comentarios: [
