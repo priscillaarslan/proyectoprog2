@@ -315,7 +315,7 @@ const data = {
           idUsuario: 2,
           comentario: "Haha!",
           usuario:"Kendall Jenner",
-          foto:"/img/kylie jenner foto d perfil!.jpg",
+          foto:"/img/foto de perfil kendall.jpg",
         },
         {
           idUsuario: 6,
@@ -344,7 +344,7 @@ const data = {
           idUsuario: 2,
           comentario: "Love you Mom",
           usuario:"Kendall Jenner",
-          foto:"/img/kylie jenner foto d perfil!.jpg",
+          foto:"/img/foto de perfil kendall.jpg",
         },
         {
           idUsuario: 3,
@@ -390,7 +390,7 @@ const data = {
           idUsuario: 2,
           comentario: "You are awesome!",
           usuario:"Kendall Jenner",
-          foto:"/img/kylie jenner foto d perfil!.jpg",
+          foto:"/img/foto de perfil kendall.jpg",
         },
       ]
 
