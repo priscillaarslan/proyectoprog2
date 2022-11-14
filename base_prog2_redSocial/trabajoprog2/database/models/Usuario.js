@@ -70,7 +70,7 @@ module.exports = function(sequelize,datatypes){
         timestamps: true, 
         underscored: false
     }
-    const Usuario = Sequelize.define(alias, cols, config);
+    const Usuario = sequelize.define(alias, cols, config);
     
     //relaciones//
     Usuario.associate=function(models){

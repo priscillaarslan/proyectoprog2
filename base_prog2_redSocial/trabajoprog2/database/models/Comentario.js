@@ -53,17 +53,17 @@ module.exports = function(sequelize,datatypes){
         timestamps: true, 
         underscored: false
     }
-    const Comentario = Sequelize.define(alias, cols, config);
+    const Comentario = sequelize.define(alias, cols, config);
     
     //relaciones//
 
 
     Comentario.associate=function(models){
-        Comentario.belongsto(models.Usuario,{
+        Comentario.belongsTo(models.Usuario,{
             as:'comentador',
             foreignKey:'FkUserid',
         })
-        Comentario.belongsto(models.Posteo,{
+        Comentario.belongsTo(models.Posteo,{
             as:'PosteoComentado',
             foreignKey:'FkPostid',
         })
