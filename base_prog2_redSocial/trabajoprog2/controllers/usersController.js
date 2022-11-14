@@ -2,8 +2,8 @@
 //para pasarselo a la vista, al render le pasamos parametros
 const data = require('../database/models');
 const User = data.User;
-const bycript = require('bycryptjs');
-const op = data.Sequalize.Op;
+const bycript = require('bcryptjs');
+const op = data.Sequelize.Op;
 
 //metodos
 const usersController = {
