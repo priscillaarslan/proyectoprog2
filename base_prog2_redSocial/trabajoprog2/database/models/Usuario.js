@@ -74,11 +74,11 @@ module.exports = function(sequelize,datatypes){
     
     //relaciones//
     Usuario.associate=function(models){
-Usuario.hasmany(models.Posteo,{
+Usuario.hasMany(models.Posteo,{
     as:'posteos',
     foreignKey:'id',
 })
-Usuario.hasmany(models.Comentario,{
+Usuario.hasMany(models.Comentario,{
     as:'comentarios',
     foreignKey:'id',
 })
