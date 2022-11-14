@@ -1,7 +1,7 @@
 //requires : es para mandarle la data del modelo al controlador, ahora hay que mandar del controlador a la vista.
 //para pasarselo a la vista, al render le pasamos parametros
 const data = require('../database/models');
-const User = data.User;
+const User = data.Usuario;
 const bycript = require('bcryptjs');
 const op = data.Sequelize.Op;
 
@@ -20,6 +20,7 @@ const usersController = {
 
       loginPost: (req,res) => {
         let info = req.body;
+        console.log(info)
         let filtro ={
           where: [{email: info.email}]
         }
@@ -34,13 +35,17 @@ const usersController = {
                 res.cookie('userId', result.dataValues.id, {maxAge: 1000* 60*10})
               }
 
-              return redirect('/movies');
+              return redirect('/');
             }else{
               return res.send('La clave no coincide');
             }
+          }else{
+            return res.send('el mail no existe')
           }
         })
-        .catch(error=>console.log(error))
+        .catch(error=>{
+          console.log(error)
+        res.send(error)})
       },
 
     miPerfil: function(req, res) { 
@@ -56,7 +61,8 @@ const usersController = {
       },
 
       logout: function(req, res) {
-        req.session.destroy();
+        
+        req.session.user.destroy();
         res.clearCookie('userId');
         res.locals.user = null
         return res.render('login');
