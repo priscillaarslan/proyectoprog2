@@ -1,6 +1,6 @@
 //requires : es para mandarle la data del modelo al controlador, ahora hay que mandar del controlador a la vista.
 //para pasarselo a la vista, al render le pasamos parametros
-const data = require('../data/models');
+const data = require('../database/models');
 const User = data.User;
 const bycript = require('bycryptjs');
 const op = data.Sequalize.Op;
