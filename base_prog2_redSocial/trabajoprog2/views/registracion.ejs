@@ -9,7 +9,13 @@
     <main>
         <section class="center main-content">
              <h1>Registrate</h1>
-<form action="/users/login" method="get">
+           
+      <form action="/users/registracion" method="POST" enctype="multipart/form-data">
+        <% if (locals.errors){ %> 
+        <h4>
+            <% locals.errors.message %> 
+        </h4>
+        <% } %> 
                <div>
                 <label class="registracion" for="Email">Email</label>
             <input class="cajaregistro1" type="Email" name="Email" id="" placeholder="Inserta tu email">
