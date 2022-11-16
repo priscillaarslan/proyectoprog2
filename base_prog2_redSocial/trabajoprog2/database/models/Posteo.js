@@ -54,16 +54,15 @@ module.exports = function(sequelize,datatypes){
     
     //relaciones//
     
-    Posteo.associate=function(models){
-        Posteo.belongsTo(models.Usuario,{
-            as:'usuario',
-            foreignKey:'FkUserid',
+   
+    Posteo.associate = function (models) {
+        Posteo.belongsTo(models.Usuario, {
+            as: 'usuario',
+            foreignKey: 'usuario_id',
         })
-        Posteo.hasMany(models.Comentario,{
-            as:'comentarios',
-            foreignKey:'id',
-    
-            
+        Posteo.hasMany(models.Comentario, {
+            as: 'comentarios',
+            foreignKey: 'post_id',
         })
         
         

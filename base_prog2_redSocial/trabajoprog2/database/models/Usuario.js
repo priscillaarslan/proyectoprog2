@@ -73,16 +73,32 @@ module.exports = function(sequelize,datatypes){
     const Usuario = sequelize.define(alias, cols, config);
     
     //relaciones//
-    Usuario.associate=function(models){
-Usuario.hasMany(models.Posteo,{
-    as:'posteos',
-    foreignKey:'id',
-})
-Usuario.hasMany(models.Comentario,{
-    as:'comentarios',
-    foreignKey:'id',
-})
+    Usuario.associate = function (models) {
+        Usuario.hasMany(models.Posteo, {
+            as: 'posteos',
+            foreignKey: 'usuario_id',
+        })
 
+        Usuario.belongsToMany(models.Usuario, {
+            as: 'mis_usuarios_seguidores',
+            through: 'seguidores',
+            foreignKey: 'seguido_id',
+            otherKey: 'seguidor_id',
+            timestamps: true
+        })
+
+        Usuario.belongsToMany(models.Usuario, {
+            as: 'mis_usuarios_seguidos',
+            through: 'seguidores',
+            foreignKey: 'seguidor_id',
+            otherKey: 'seguido_id',
+            timestamps: true
+        })
+
+        Usuario.hasMany(models.Comentario, {
+            as: 'comentarios',
+        foreignKey: 'usuario_id',
+        })
 
     }
     
