@@ -1,5 +1,5 @@
-const data = require('../data/index')
-
+// const data = require('../data/index')
+const data = require('../database/models');
 const postsController = {
     agregarPost: function(req, res) {
         res.render('agregarPost');
@@ -12,6 +12,15 @@ const postsController = {
         // res.send(detallePosteo)
       } ,
       
+      crearPost: function(req, res) {
+
+        data.Posteo.create({
+          foto: req.file.filaname,
+          texto: req.body.post,
+          usuario_id: req.session.user.id
+        })
+
+      }
 
     }  
   

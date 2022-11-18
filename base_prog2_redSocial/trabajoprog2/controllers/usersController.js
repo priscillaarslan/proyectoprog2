@@ -183,9 +183,9 @@ const usersController = {
 
 
 }
-    /*req es un objeto literal que esta en el navegador, res es la respuesta, 
-    PARAMS --> tambien es un objeto literal, el .id es el parametro*/
-    
-    //exportacion
-    
-    module.exports = usersController
+/*req es un objeto literal que esta en el navegador, res es la respuesta, 
+PARAMS --> tambien es un objeto literal, el .id es el parametro*/
+
+//exportacion
+
+module.exports = usersController
