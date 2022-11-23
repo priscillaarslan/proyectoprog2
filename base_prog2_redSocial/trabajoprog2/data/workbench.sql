@@ -48,6 +48,16 @@ FOREIGN KEY (posteo_id) REFERENCES posteos (id)  ON DELETE CASCADE
 
 );      
 
+create table seguidores(
+  id int unsigned primary key auto_increment,
+  seguido_id int unsigned not null,
+  seguidor_id int unsigned not null,
+  FOREIGN KEY (seguido_id) references usuarios(id) ON DELETE CASCADE,
+  FOREIGN KEY (seguidor_id) references usuarios(id) ON DELETE CASCADE,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
 
 
 
