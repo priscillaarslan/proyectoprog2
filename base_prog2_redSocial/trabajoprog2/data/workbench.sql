@@ -39,13 +39,17 @@ createdAT TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 updatedAT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
 deleatedAT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-FkUserId INT UNSIGNED,
-FOREIGN KEY (fkUserId) REFERENCES usuarios (Id),
+usuario_id INT UNSIGNED,
+FOREIGN KEY (usuario_id) REFERENCES usuarios (id)  ON DELETE CASCADE,
 
- fkPostId INT UNSIGNED,
-FOREIGN KEY () REFERENCES posteos (Id)
+posteo_id INT UNSIGNED,
+FOREIGN KEY (posteo_id) REFERENCES posteos (id)  ON DELETE CASCADE
+
 
 );      
+
+
+
 
 INSERT INTO usuarios (email,foto, password,nacimiento,dni)
 VALUES ('parslan@udesa.edu.ar', 'https://bangbranding.com/blog/wp-content/uploads/2016/09/700x511_SliderInterior.jpg', '1234','2002-12-10',123456789);
