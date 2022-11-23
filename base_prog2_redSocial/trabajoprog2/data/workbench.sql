@@ -14,7 +14,7 @@ updatedAT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 deleatedAT TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 
 
-);`
+);
 
 CREATE TABLE posteos (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -125,12 +125,3 @@ VALUES ('quien pudiera!', '1','2' );
 
 INSERT INTO comentarios (texto,FkUserId,Fkpostid)
 VALUES ('que buena foto!!', '1','1' );
-
-
-
-
-/* El unsigned hace que no nos permite utilizar numeros no negativos. SQL esta 
-hecho para que las cosas sean escalables y cuando manejamos mucha informacion 
-que un campo con una columna ocupe mas o menos beats puede hacer una diferencia.
-El unsigned hace que ese beat que queda suelto, el unsidned lo utiliza como otro 
-numero para que no sea negativo*/
