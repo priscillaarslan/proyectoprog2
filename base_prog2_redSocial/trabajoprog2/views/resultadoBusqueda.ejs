@@ -46,4 +46,16 @@
                             </li>
                             <% } %>
 
-                            
+                            <a href="/posts/detallePost/<%= post.id %>">Ver más...</a>
+                        </ul>
+                    </div>
+                </article>
+            <% } %> 
+
+            <% if(posteos.length == 0) { %>
+                <p>No hay resultados</p>
+            <% } %>
+           
+        </section>    
+    </main>
+    <%- include('./partials/footer') %>

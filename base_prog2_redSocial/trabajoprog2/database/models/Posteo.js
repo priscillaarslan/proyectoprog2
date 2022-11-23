@@ -17,58 +17,35 @@ module.exports = function(sequelize,datatypes){
             notNull: true, 
             type: datatypes.STRING
         },
-        createdAT: {
-            notNull: true, 
-            defaultValue: sequelize.literal("CURRENT_TIMESTAMP"),
-            type: datatypes.DATE
-        },
-        updatedAT: { 
-            notNull: true, 
-            defaultValue: sequelize.literal("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"),
-            type: datatypes.DATE
-        },
-    
-        deleatedAT: {
-            notNull: true, 
-            defaultValue: sequelize.literal("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"),
-            type: datatypes.DATE
-        },
-    
-        FkUserid:{ 
-            defaultValue:sequelize.literal('null'),
+       
+        usuario_id:{ 
             type:datatypes.INTEGER.UNSIGNED
-    
-    
-    
         }
-        
-    
     }
-    
     let config = {
         tableName: "posteos", 
         timestamps: true, 
         underscored: false
     }
+
     const Posteo = sequelize.define(alias, cols, config);
     
     //relaciones//
-    
    
     Posteo.associate = function (models) {
         Posteo.belongsTo(models.Usuario, {
             as: 'usuario',
             foreignKey: 'usuario_id',
         })
+
         Posteo.hasMany(models.Comentario, {
             as: 'comentarios',
-            foreignKey: 'post_id',
+            foreignKey: 'posteo_id',
         })
-        
-        
-            }
+    }
     
     
     return Posteo 
     
     }
+
