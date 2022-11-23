@@ -18,6 +18,13 @@ let storage = multer.diskStorage({
 
 let upload = multer({storage: storage});
 
-
+/* GET home page. */ /* NOTA: Para que direccion en la url hacemos tal metodo ('/')*/
+router.get('/agregarPost', postsController.agregarPost);
+router.post('/crearPost',  upload.single('foto'), postsController.crearPost);
+router.get('/detallePost/:id', postsController.detallePost);
+router.get('/borrarPost/:id', postsController.borrarPost);
+router.get('/editarPost/:id', postsController.editarPost);
+router.post('/modificarPost/:id', postsController.modificarPost);
+router.post('/comentario/:id', postsController.comentario);
 
 module.exports = router;
