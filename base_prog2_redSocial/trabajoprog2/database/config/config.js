@@ -1,14 +1,11 @@
 module.exports={
-
-  "development": {
+ "development": {
     "username": "docker",
     "password": "docker",
     "database": "proyecto",
     "host": "127.0.0.1",
     "dialect": "mysql",
     logging: false,
-  
-  
   },
   "test": {
     "username": "root",
