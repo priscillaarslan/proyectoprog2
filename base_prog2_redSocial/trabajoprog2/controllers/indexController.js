@@ -35,7 +35,6 @@ const indexController = {
       },
       where: {texto: {[op.like] : "%" + busqueda + "%"}},
       order: [
-        
         ['createdAt', orden]
       ]
     })
