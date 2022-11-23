@@ -10,6 +10,11 @@
         <section class="center main-content">
         <h1>Login</h1>
         <form action="/users/login" method="post">
+            <% if (locals.errors){ %>
+                <h4>
+                    <%= locals.errors.message %>
+                </h4>
+            <% } %>
         <div>
             <label for="Email">Email</label>
             <input class="cajalogin" type="Email" name="email" id="" placeholder="Inserta tu email">
@@ -17,6 +22,10 @@
         <div>
             <label for="Password">Contraseña</label>
             <input class="cajalogin1" type="Password" name="password" id="">
+        </div>
+        <div>
+            <label for="Password">Recordarme</label>
+            <input class="cajalogin1" type="checkbox" name="recordar" id="">
         </div>
         <button class="buttonlogeate" type="submit">Logeate</button>
 

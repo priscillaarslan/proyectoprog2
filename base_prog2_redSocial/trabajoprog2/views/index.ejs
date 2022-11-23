@@ -14,14 +14,18 @@
                 <% let post= posteos[i] %> 
             <article class="post">
                 <div class="info-usuario ">
-                    <img class="foto-usuario" src="<%= post.imagen %>  " alt="">
+                    <img class="foto-usuario" src="/img/usuarios/<%= post.usuario.foto %>" alt="">
                     <h4>
-                        <a href="/users/detalleUsuario/<%= post.idUsuario %> "> <%= post.nombre %> </a>
+                        <a href="/users/detalleUsuario/<%= post.usuario.id %> "> <%= post.usuario.username %> </a>
                     </h4>
                 </div>
                 <div class="post-body">
-                    <a href="/posts/detallePost/<%= post.id %>"> <img src="<%= post.foto %> " alt="">
+                    <a href="/posts/detallePost/<%= post.id %>"> 
+                        <img src="/img/posts/<%= post.foto %> " alt="">
                     </a>
+                    <p style="margin-left: 20px">
+                        <%= post.texto %>
+                    </p>
                 </div>
                 <ul class="post-reacciones">
                     <li>
@@ -35,12 +39,12 @@
                     <h4>Comentarios</h4>
                     <ul>
                         <% for( let j =0; j<post.comentarios.length;j++ ) { %>
-                          <li>
-                            <a href="/users/detalleUsuario/<%= post.comentarios[j].idUsuario %> "><%= post.comentarios[j].usuario %> </a>
-                            <span><%= post.comentarios[j].comentario %> </span>
-                        </li>
+                            <li>
+                                <a href="/users/detalleUsuario/<%= post.comentarios[j].comentador.id %> "><%= post.comentarios[j].comentador.username %> </a>
+                                <span><%= post.comentarios[j].texto %> </span>
+                            </li>
                         <% } %>
-                        <a href="/posts/detallePost">Ver más...</a>
+                        <a href="/posts/detallePost/<%= post.id %>">Ver más...</a>
                     </ul>
                 </div>
             </article>

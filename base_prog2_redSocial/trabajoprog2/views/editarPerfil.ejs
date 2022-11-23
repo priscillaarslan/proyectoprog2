@@ -9,34 +9,28 @@
     <main>
         <section class="center main-content">
         <h1>Editar perfil</h1>
-        <form action="users/miPerfil" method="get"></form>
-        <div>
-            <label for="Email">Email</label>
-            <input type="Email" name="Email" value="<%= info[indice].email %>" >
-        </div>
-        <div>
-            <label for="Username">Username</label>
-            <input type="text" name="Username" value="<%= info[indice].username %>" >
-        </div>
-
-        <div>
-            <label for="Password">Password</label>
-            <input type="Password" name="Password"  value="<%= info[indice].password %>">
-        </div>
-        <div>
-            <label for="Pfp">Foto de perfil</label>
-            <input type="text" name="Pfp" value="<%= info[indice].foto %>" >
-        </div>
-        <div>
-            <label for="fecha">Fecha de naimiento</label>
-            <input type="text" name="fecha" value="<%= info[indice].fecha %>" >
-        </div>
-        <div>
-            <label for="dni">DNI</label>
-            <input type="text" name="DNI" value="<%= info[indice].dni %>"  >
-        </div>
+        <form action="/users/modificarPerfil" method="post" enctype="multipart/form-data">
+            <% if (locals.errors){ %>
+                <h4>
+                    <%= locals.errors.message %>
+                </h4>
+            <% } %>
+            <div>
+                <label for="Pfp">Foto de perfil</label> <br>
+                <img width="50px" src="/img/usuarios/<%= locals.user.foto %>" alt=""> <br>
+                <input type="file" name="foto">
+            </div>
+            <div>
+                <label for="fecha">Fecha de naimiento</label>
+                <input type="date" name="fecha" value="<%= locals.user.fechaDeNacimiento %>">
+            </div>
+            <div>
+                <label for="dni">DNI</label>
+                <input type="text" name="dni" value="<%= locals.user.DNI %>">
+            </div>
         
-        <button type="submit">Regsitrate</button>
+        <button type="submit">Actualizar</button>
+    </form>
         </section>
     </main>
 
