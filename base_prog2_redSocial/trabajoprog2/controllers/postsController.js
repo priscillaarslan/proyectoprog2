@@ -63,6 +63,49 @@ const postsController = {
   
       },
 
+      borrarPost: function(req,res){
+        let idPosteo = req.params.id
+
+        db.Posteo.destroy({
+          where: [
+            {
+              id: idPosteo
+            },
+            {
+              usuario_id: req.session.user.id
+            }
+          ]
+        })
+        .then(() => res.redirect('/'))
+      },
+
+      editarPost:  function (req, res) { 
+
+        if(req.session.user) {
+    
+          let idPosteo = req.params.id
+    
+          data.Posteo.findOne({
+            include: {
+              all: true,
+              nested: true
+            },
+            where: {
+              id: idPosteo
+            }
+          })
+          .then((posteo) => {
+            return res.render('editarPost', { posteo: posteo })
+          })
+          
+        }
+        else{
+          res.redirect('/users/login')
+        }
+       
+      },
+      
+
       
 
         
