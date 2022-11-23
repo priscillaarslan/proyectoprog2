@@ -104,12 +104,69 @@ const postsController = {
         }
        
       },
-      
+      modificarPost:  function (req, res) { 
+    
+        let idPosteo = req.params.id
+    
+        data.Posteo.update({
+            texto: req.body.texto
+          },
+          {
+            where: {
+              id: idPosteo
+            }
+        })
+        .then((posteo) => {
+          return res.redirect('/posts/detallePost/' + idPosteo)
+        })
+    
+      },
+    
+      comentario:  function (req, res) { 
+    
+        let idPosteo = req.params.id
+        let errors = {};
+    
+        if (req.body.comentario == "") {
+    
+          data.Posteo.findOne({
+            include: {
+              all: true,
+              nested: true
+            },
+            where: {
+              id: idPosteo
+            }
+          })
+          .then((posteo) => {
+            errors.message = "El campo comentario esta vacio";
+            res.locals.errors = errors;
+            return res.render('detallePost', { posteo: posteo })
+          })
+    
+        }
+        else {
+          
+          db.Comentario.create({
+            texto: req.body.comentario,
+            usuario_id: req.session.user.id,
+            posteo_id: idPosteo
+          })
+          .then(()=> {
+            res.redirect('/posts/detallePost/' + idPosteo)
+          })
+        }
+    
+      }
+    
+    }
+    
+    //exportacion
+    
+    module.exports = postsController; 
 
       
 
         
   
-    //exportacion
     
-    module.exports = postsController;
