@@ -1,32 +1,45 @@
-  //requires : es para mandarle la data del modelo al controlador, ahora hay que mandar del controlador a la vista.
+ //requires : es para mandarle la data del modelo al controlador, ahora hay que mandar del controlador a la vista.
 //para pasarselo a la vista, al render le pasamos parametros
 const data = require('../database/models');
 const User = data.Usuario;
 const bycript = require('bcryptjs');
+const db = require('../database/models');
 const op = data.Sequelize.Op;
 
 //metodos
 const usersController = {
   detalleUsuario: function (req, res) {
     let id = req.params.id
+    let user_id = null;
+
+    if(req.session.user) {
+      user_id = req.session.user.id;
+    }
 
     data.Usuario.findOne({
       include: {
         all: true,
         nested:true
-      }
-    }, {
+      },
       where: {
         id: id
       }
     })
     .then(usuario => {
-      res.render('detalleUsuario', { usuario: usuario });
-    })
 
-    // let usuario = data.Usuario.find(usuario => usuario.id == id)
-    // let posteos = data.posteos.filter(posteo => posteo.idUsuario == id)
-    // console.log(posteos);
+      let siguiendo = false;
+
+      console.log({user_id});
+
+      for(let i = 0; i < usuario.mis_usuarios_seguidores.length; i++) {
+        if(user_id == usuario.mis_usuarios_seguidores[i].id) {
+          siguiendo = true;
+        }
+      }
+
+      res.render('detalleUsuario', { usuario: usuario, siguiendo: siguiendo });
+    })
+    
   },
   Login: function (req, res) {
     res.render('login');
@@ -41,7 +54,7 @@ const usersController = {
       res.locals.errors = errors;
       return res.render('login');
     }
-    else if (req.body.password == "") {
+    else if (req.body.dni == "") {
       errors.message = "El campo contraseña esta vacio";
       res.locals.errors = errors;
       return res.render('login');
@@ -87,8 +100,21 @@ const usersController = {
   },
 
   miPerfil: function (req, res) {
-
-    return res.send("ok")
+    let id = req.session.user.id
+    data.Usuario.findOne({
+      include: {
+        all: true,
+        nested:true
+      }
+    }, {
+      where: {
+        id: id
+      }
+    })
+    .then(usuario => {
+      res.render('miPerfil', { usuario: usuario });
+    })
+    
   },
 
   registracion: function (req, res) {
@@ -173,6 +199,94 @@ const usersController = {
   editarPerfil: function (req, res) {
     res.render('editarPerfil', { info: data.usuarios, indice: req.params.id });
   },
+
+
+  modificarPerfil: function (req, res) {
+
+    let errors = {};
+
+    if (req.file == undefined) {
+      errors.message = "El campo foto esta vacio";
+      res.locals.errors = errors;
+      return res.render('editarPerfil');
+    }
+    else if (req.body.fecha == "") {
+      errors.message = "El campo fecha esta vacio";
+      res.locals.errors = errors;
+      return res.render('editarPerfil');
+    }
+    else if (req.body.dni == "") {
+      errors.message = "El campo DNI esta vacio";
+      res.locals.errors = errors;
+      return res.render('editarPerfil');
+    }
+    else if (req.body.dni.length != 8) {
+      errors.message = "El campo dni debe tener 8 digitos";
+      res.locals.errors = errors;
+      return res.render('editarPerfil');
+    }
+    else {
+      data.Usuario.update({
+        foto: req.file.filename,
+        fechaDeNacimiento: req.body.fecha,
+        DNI: req.body.dni
+      },{
+        where: {
+          id: req.session.user.id
+        }
+      })
+      .then((usuario) => {
+     
+        data.Usuario.findOne({
+          where: {
+            id: req.session.user.id
+          }
+        })
+        .then(usuario => {
+          req.session.user = usuario
+          res.redirect('/users/miPerfil')
+        })
+        .catch(error => console.log(error))
+
+      })
+      .catch(error => console.log(error))
+    }
+   
+  },
+
+  seguir: function (req, res) {
+    let id_seguido = req.params.id
+
+    db.Seguidor.create({
+      seguido_id: id_seguido,
+      seguidor_id: req.session.user.id
+    })
+    .then(usuario => {
+      res.redirect('/users/detalleUsuario/' + id_seguido)
+    })
+    .catch(error => console.log(error))
+
+  },
+
+  noSeguir: function (req, res) {
+    let id_seguido = req.params.id
+
+    db.Seguidor.destroy({
+      where: [
+        {
+          seguido_id: id_seguido
+        },
+        {
+          seguidor_id: req.session.user.id
+        }
+      ]
+    })
+    .then(usuario => {
+      res.redirect('/users/detalleUsuario/' + id_seguido)
+    })
+    .catch(error => console.log(error))
+  },
+
 
   logout: function (req, res) {
     req.session.destroy();
