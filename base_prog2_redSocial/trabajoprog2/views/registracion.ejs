@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <%- include('./partials/head') %> 
+<%- include('./partials/head') %>
 
-<body>
-    <%- include('./partials/header') %>
+    <body>
+        <%- include('./partials/header') %>
 
-    <main>
-        <section class="center main-content">
-             <h1>Registrate</h1>
-           
-      <form action="/users/registracion" method="POST" enctype="multipart/form-data">
-        <% if (locals.errors){ %> 
-        <h4>
-            <% locals.errors.message %> 
-        </h4>
-        <% } %> 
-               <div>
-                <label class="registracion" for="Email">Email</label>
-            <input class="cajaregistro1" type="Email" name="Email" id="" placeholder="Inserta tu email">
-               </div>
-               <div>
-                <label class="registracion" for="Password">Contraseña</label>
-               <input class="cajaregistro"  type="Password" name="Password" id="">
-              </div>
-              <div>
-                <label class="registracion" for="Pfp">Foto de perfil</label>
-                <input class="cajaregistro2" type="file" name="foto" id="" placeholder="Inserta tu foto">
-            </div>
-                <div>
-               <label class="registracion" for="fecha">Fecha de nacimiento</label>
-               <input class="cajaregistro3" type="date" name="fecha" id="" placeholder="Inserta tu fecha de nacimiento">
-                </div>
-                 <div>
-                <label class="registracion" for="dni">DNI</label>
-               <input class="cajaregistro4" type="number" name="fecha" id="" placeholder="Inserta tu DNI">
-              </div>
-        
-                 <button class="buttonregistro" type="submit">Registrate</button>
- </form>  </section>
-          </section>
-    </main>
+            <main>
+                <section class="center main-content">
+                    <h1>Registrate</h1>
+<form action="/users/registracion" method="POST" enctype="multipart/form-data">
+                        <% if (locals.errors){ %>
+                            <h4>
+                                <%= locals.errors.message %>
+                            </h4>
+                        <% } %>
+                        <div>
+                        <label class="registracion" for="username">Username</label>
+                        <input class="cajaregistro1" type="text" name="username" id="" placeholder="Inserta tu username">
+                        </div>
+                        <div>
+                        <label class="registracion" for="Email">Email</label>
+                         <input class="cajaregistro1" type="Email" name="email" id="" placeholder="Inserta tu email">
+                        </div>
+                        <div>
+                        <label class="registracion" for="Password">Contraseña</label>
+                        <input class="cajaregistro" type="Password" name="password" id="">
+                        </div>
+                        <div>
+                         <label class="registracion" for="Pfp">Foto de perfil</label>
+                        <input class="cajaregistro2" type="file" name="foto" id="" placeholder="Inserta tu foto">
+                        </div>
+                        <div>
+                         <label class="registracion" for="fecha">Fecha de nacimiento</label>
+                        <input class="cajaregistro3" type="date" name="fecha" id="" placeholder="Inserta tu fecha de nacimiento">
+                        </div>
+                        <div>
+                        <label class="registracion" for="dni">DNI</label>
+                        <input class="cajaregistro4" type="number" name="dni" id="" placeholder="Inserta tu DNI">
+                        </div>
 
-    <%- include('./partials/footer') %>
+                        <button class="buttonregistro" type="submit">Registrate</button>
+                    </form>
+                </section>
+                </section>
+            </main>
 
-</body>
+            <%- include('./partials/footer') %>
+
+    </body>
 
 </html>
 

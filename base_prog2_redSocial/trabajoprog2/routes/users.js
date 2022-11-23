@@ -15,7 +15,6 @@ let storage = multer.diskStorage({
                 /* imgPerfil-456456456456456.png  */             
     }
 });
-
 let upload = multer({storage: storage});
 /* GET users listing. */
 router.get("/login", usersController.Login);
