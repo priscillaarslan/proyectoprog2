@@ -23,7 +23,10 @@ router.post("/login", usersController.loginPost);
 router.get("/miPerfil", usersController.miPerfil);
 router.get("/registracion", usersController.registracion);
 router.post("/registracion", upload.single('foto'), usersController.registrar);
-router.get("/editarPerfil/:id", usersController.editarPerfil);
+router.get("/editarPerfil", usersController.editarPerfil);
+router.post("/modificarPerfil",  upload.single('foto'), usersController.modificarPerfil);
+router.get("/seguir/:id", usersController.seguir);
+router.get("/noSeguir/:id", usersController.noSeguir);
 router.get("/logout", usersController.logout);
 
 
