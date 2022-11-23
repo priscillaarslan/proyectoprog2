@@ -26,6 +26,7 @@ const indexController = {
   busqueda: function (req, res) {
 
     let busqueda = req.query.buscar;
+    let orden = req.query.orden;
 
     data.Posteo.findAll({
       include: {
@@ -34,7 +35,8 @@ const indexController = {
       },
       where: {texto: {[op.like] : "%" + busqueda + "%"}},
       order: [
-        ['createdAT', 'DESC']
+        
+        ['createdAt', orden]
       ]
     })
     .then(posteos => {
