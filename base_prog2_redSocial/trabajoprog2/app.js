@@ -3,13 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const session = require('express-session');
-
+var session = require('express-session');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var postsRouter = require ('./routes/posts');
-const db = require('./database/models');
-
+var postRouter = require('./routes/posts');
+var db = require('./database/models')
 var app = express();
 
 // view engine setup
@@ -23,46 +21,51 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-  secret: 'redSocial', 
-  resave: false, 
-  saveUnitialized: true
+  secret: 'myApp',
+  resave: false,
+  saveUninitialized: true
 }));
 
-/* #nota: Crear middleware de locals AQUI */
 app.use(function(req, res, next) {
+  /* Logica */
+
   if (req.session.user != undefined) {
       res.locals.user = req.session.user;
   }
+
   return next();
 });
 
-// Las lineas 9 y 25 son necesarias para que nosotros podamos llamar a los posteos 
+app.use(function(req, res, next) {
+  if (req.cookies.userId != undefined && req.session.user == undefined) {
+      let idUsuarioEnCookie = req.cookies.userId;
 
-app.use(function(req, res, next){
-  if(req.cookies.userId != undefined && req.session.user ==undefined){
-    let idUsuarioEnCookie = req.cookies.userId;
+      db.Usuario.findByPk(idUsuarioEnCookie)
+      .then((user) => {
 
-    db.User.findByPk(idUsuarioEnCookie)
-    .then((user) => {
-      req.session.user = user.dataValues
-      res.locals.user = user.dataValues;
+        req.session.user = user.dataValues;
+        res.locals.user  = user.dataValues;
 
-      return next();
-    }).catch((err)=>{
-      console.log(err);
-      return next();
-    });
-  }else{
+        return next();
+        
+      }).catch((err) => {
+        console.log(err);
+        return next();
+      });
+  } else {
     return next();
   }
 });
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/posts', postsRouter);
+app.use('/post', postRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -74,4 +77,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
 module.exports = app;
+
+
+
+
