@@ -28,22 +28,20 @@ app.use(session({
   saveUnitialized: true
 }));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/posts', postsRouter);
 
-// Las lineas 9 y 25 son necesarias para que nosotros podamos llamar a los posteos 
-
-// catch 404 and forward to error handler
+/* #nota: Crear middleware de locals AQUI */
 app.use(function(req, res, next) {
-  next(createError(404));
+  if (req.session.user != undefined) {
+      res.locals.user = req.session.user;
+  }
+  return next();
 });
 
-
 app.use(function(req, res, next){
-  if(req.cookies.userId != undefined && req.session.user ==undefined){
+  if(req.cookies.userId != undefined && req.session.user == undefined){
     let idUsuarioEnCookie = req.cookies.userId;
-    db.User.findByPk(idUsuarioEnCookie)
+
+    db.Usuario.findByPk(idUsuarioEnCookie)
     .then((user) => {
       req.session.user = user.dataValues
       res.locals.user = user.dataValues;
@@ -56,6 +54,18 @@ app.use(function(req, res, next){
   }else{
     return next();
   }
+});
+
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/posts', postsRouter);
+
+// Las lineas 9 y 25 son necesarias para que nosotros podamos llamar a los posteos 
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
 
