@@ -8,25 +8,25 @@
     <main>
         <section class="center main-content">
         <h1>Nuevo Post</h1>
-        <p>Crear el formulario para cargar un nuevo posteo.</p>
-        <form action="/users/miPerfil" method="get"></form>
-        <div>
-            <label for="user">Id del usuario</label>
-            <input class="agregarpost" type="number" name="Email" id="" placeholder="ID del usuario">
-        </div>
-        <div>
-            <label for="Imagen">Imagen</label>
-            <input class="agregarpost1" type="submit" name="Enviar archivo" id="" placeholder="Imagen">
-        </div>
-        <div>
-            <label for="post">textos </label>
-            <input class="agregarpost2" type="text" name="post" id="" placeholder="escribi un texto ">
-        </div>
-       
-        <button class="agregarpost3"  type="submit">Loggeate</button>
-        </section>
-        </section>
-    </main>
+        
+        <form action="/posts/crearPost" method="post" enctype="multipart/form-data">
+            <% if (locals.errors){ %>
+                <h4>
+                    <%= locals.errors.message %>
+                </h4>
+            <% } %>
+            <div>
+                <label for="Imagen">Imagen</label>
+                <input class="agregarpost1" type="file" name="foto" id="" placeholder="Imagen">
+            </div>
+            <div>
+                <label for="post">texto</label>
+                <input class="agregarpost2" type="text" name="texto" id="" placeholder="escribi un texto ">
+            </div>
+            <button class="agregarpost3" type="submit">Crear post</button>
+        </form>
+    </section>
+</main>
 
     <%- include('./partials/footer') %>
 

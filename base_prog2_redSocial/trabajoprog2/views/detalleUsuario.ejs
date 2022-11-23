@@ -9,26 +9,33 @@
     <main>
         <div class="user-detail container">
             <section class="top main-content">
-                <img class="profile" src="<%= usuario.foto %> " alt="">
+                <img class="profile" src="/img/usuarios/<%= usuario.foto %> " alt="">
                 <div class="info-usuario">
                     <p><%= usuario.username %> </p> 
-                    <a class="follow" href="">seguir</a>
+                    <% if(locals.user) { %>
+                        <% if(locals.user.id != usuario.id) { %>
+                            <% if(siguiendo) { %>
+                                <a class="follow" href="/users/noSeguir/<%= usuario.id %>">Dejar de seguir</a>
+                            <% } else { %>
+                                <a class="follow" href="/users/seguir/<%= usuario.id %>">seguir</a> 
+                            <% } %>
+                        <% } %>
+                    <% } %>
                     <ul class="meta">
-                        <li><%= usuario.posteos %>  post</li>
-                        <li><%= usuario.seguidores %> seguidores</li>
-                        <li><%= usuario.seguidos %> seguidos</li>
+                        <li><%= usuario.posteos.length %>  post</li>
+                        <li><%= usuario.mis_usuarios_seguidores.length %> seguidores</li>
+                        <li><%= usuario.mis_usuarios_seguidos.length %> seguidos</li>
                     </ul>
                 </div>
             </section>
             <section class="bottom">
-                <% for (let i =0;i<posteos.length;i++){ %> 
+                <% for (let i =0;i< usuario.posteos.length ;i++){ %> 
                 <article class="post">
-                    <a href="/posts/detallePost/<%= posteos[i].id %>">
-                        <img class="post" src="<%= posteos[i].foto %>" alt="">
+                    <a href="/posts/detallePost/<%= usuario.posteos[i].id %>">
+                        <img class="post" src="/img/posts/<%= usuario.posteos[i].foto %>" alt="">
                     </a>
                 </article>
                 <% } %> 
-                
             </section>
         </div>
     </main>
