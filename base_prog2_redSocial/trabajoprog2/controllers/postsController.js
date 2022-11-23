@@ -1,9 +1,20 @@
 // const data = require('../data/index')
+const db = require('../database/models');
 const data = require('../database/models');
+
+
+
 const postsController = {
-    agregarPost: function(req, res) {
-        res.render('agregarPost');
-      },
+
+  agregarPost: function (req, res) {
+    if(req.session.user) {
+      res.render('agregarPost');
+    }
+
+    else{
+      res.redirect('/users/login')
+    }
+  },
 
       detallePost : function(req, res) {
         let idPosteo = req.params.id
