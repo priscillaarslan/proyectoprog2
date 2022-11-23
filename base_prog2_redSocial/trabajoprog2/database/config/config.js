@@ -1,10 +1,14 @@
 module.exports={
+
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "redSocial",
+    "username": "docker",
+    "password": "docker",
+    "database": "proyecto",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    logging: false,
+  
+  
   },
   "test": {
     "username": "root",
