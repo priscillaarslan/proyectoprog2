@@ -18,22 +18,54 @@ const postsController = {
 
       detallePost : function(req, res) {
         let idPosteo = req.params.id
-        let detallePosteo = data.posteos.find(posteo => posteo.id == idPosteo)
-        return res.render('detallePost', {info: detallePosteo})
-        // res.send(detallePosteo)
-      } ,
+
+        data.posteo.findOne({
+          include: {
+            all: true,
+            nested: true
+
+          },
+          where: {
+            id: idPosteo
+          }
+        })
+
+        .then((posteo) => {
+          return res.render('detallePost', { posteo: posteo })
+        })
+      },
+
       
       crearPost: function(req, res) {
 
-        data.Posteo.create({
-          foto: req.file.filaname,
-          texto: req.body.post,
-          usuario_id: req.session.user.id
-        })
+        let errors = {};
+        if (req.file == undefined) {
+          errors.message = "El campo foto esta vacio";
+          res.locals.errors = errors;
+          return res.render('agregarPost');
+        }
 
-      }
+        else if (req.body.texto == ""){
+          errors.message = "El campo exto esta vacio";
+          res.locals.errors = errors;
+          return res.render('agregarPost');
+        }
 
-    }  
+        else{
+          data.Posteo.create({
+            foto: req.file.filename,
+            texto: req.body.texto,
+            usuario_id: req.session.user.id
+          })
+          .then((posteo) => res.redirect('/posts/detallePost/' + posteo.id))
+          .catch((error) => console.log(error))
+        }
+  
+      },
+
+      
+
+        
   
     //exportacion
     
