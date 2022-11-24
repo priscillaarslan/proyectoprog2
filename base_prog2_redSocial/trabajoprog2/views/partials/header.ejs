@@ -4,34 +4,43 @@
       <h2 class="logo"><a class="logo1" href="/">KardashianNetwork</a></h2>
     </div>
     <div class="navbar-center">
-      <form action="" class="search">
+      <form action="/busqueda" class="search">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" class="search-input" placeholder="Buscar..." />
+        <input type="search" name="buscar" class="search-input" placeholder="Buscar..." />
+        <div style="display: flex; margin-top:20px">
+          <label for="">Asc</label>
+          <input checked type="radio" name="orden" value="asc">
+          <label for="">Desc</label>
+          <input type="radio" name="orden" value="desc">
+        </div>
       </form>
     </div>
     <div class="navbar-right">
       <ul class="menu">
-        <li><a class="menu1" href="/users/registracion">Registro</a></li>
-        <li><a class="menu1" href="/users/login">Login</a></li>
-        <li>
-          <a class="menu2" href="/"><i class="fa-solid fa-house"></i></a>
-        </li>
-        <li>
-          <a class="menu2" href="/posts/agregarPost"
-            ><i class="fa-regular fa-square-plus"></i
-          ></a>
-        </li>
-        <li>
-          <a class="menu2" href="/users/miPerfil"
-            ><i class="fa-regular fa-user"></i
-          ></a>
-        </li>
-
-        <li>
-          <a class="menu2" href="/users/logout"
-            ><i class="fa-solid fa-arrow-right-from-bracket"></i
-          ></a>
-        </li>
+        <% if(locals.user == undefined) { %>
+          <li><a class="menu1" href="/users/registracion">Registro</a></li>
+          <li><a class="menu1" href="/users/login">Login</a></li>
+        <% } else { %>
+          <li>Bienvenido <%= locals.user.username %> </li>
+          <li>
+            <a class="menu2" href="/"><i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+            <a class="menu2" href="/posts/agregarPost"
+              ><i class="fa-regular fa-square-plus"></i
+            ></a>
+          </li>
+          <li>
+            <a class="menu2" href="/users/miPerfil"
+              ><i class="fa-regular fa-user"></i
+            ></a>
+          </li>
+          <li>
+            <a class="menu2" href="/users/logout"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i
+            ></a>
+          </li>
+        <% } %>
       </ul>
     </div>
   </nav>

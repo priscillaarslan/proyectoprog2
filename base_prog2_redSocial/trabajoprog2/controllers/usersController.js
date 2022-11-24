@@ -1,4 +1,4 @@
- //requires : es para mandarle la data del modelo al controlador, ahora hay que mandar del controlador a la vista.
+//requires : es para mandarle la data del modelo al controlador, ahora hay que mandar del controlador a la vista.
 //para pasarselo a la vista, al render le pasamos parametros
 const data = require('../database/models');
 const User = data.Usuario;
@@ -199,7 +199,6 @@ const usersController = {
   editarPerfil: function (req, res) {
     res.render('editarPerfil', { info: data.usuarios, indice: req.params.id });
   },
-
 
   modificarPerfil: function (req, res) {
 
