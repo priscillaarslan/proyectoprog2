@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/head') %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <section class="center main-content">
+                    <h1>Editar Post</h1>
+                   
+                    <form action="/posts/modificarPost/<%= posteo.id %>" method="post">
+                        <% if (locals.errors){ %>
+                            <h4>
+                                <%= locals.errors.message %>
+                            </h4>
+                        <% } %>
+                        <div>
+                            <label for="post">texto</label>
+                            <input required class="agregarpost2" value="<%= posteo.texto %>" type="text" name="texto" id="" placeholder="escribi un texto ">
+                        </div>
+                        <button class="agregarpost3" type="submit">Editar post</button>
+                    </form>
+                </section>
+            </main>
+
+            <%- include('./partials/footer') %>
+
+    </body>
+
+</html>
