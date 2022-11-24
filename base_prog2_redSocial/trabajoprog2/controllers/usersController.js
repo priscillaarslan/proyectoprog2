@@ -29,7 +29,6 @@ const usersController = {
 
       let siguiendo = false;
 
-      console.log({user_id});
 
       for(let i = 0; i < usuario.mis_usuarios_seguidores.length; i++) {
         if(user_id == usuario.mis_usuarios_seguidores[i].id) {
@@ -64,7 +63,8 @@ const usersController = {
       let info = req.body;
 
       let filtro = {
-        where: [{ email: info.email }]
+        where: { email: info.email }
+        
       }
       User.findOne(filtro)
         .then((result) => {

@@ -17,7 +17,10 @@
                             
                             <% if(locals.user) { %>
                                 <% if(locals.user.id == posteo.usuario_id) { %>
-                                    <a href="/posts/editarPost/<%= posteo.id %>">Editar posteo</a>
+                        <br>
+                        <br>
+                                    <a href="/posts/editarPost/<%= posteo.id %>"> Editar posteo</a>
+                                    <br>
                                     <a href="/posts/borrarPost/<%= posteo.id %>">Eliminar posteo</a>
                                 <% } %>
                             <% } %>
